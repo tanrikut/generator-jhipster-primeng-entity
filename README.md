@@ -10,15 +10,16 @@ This module is replaces components in entity pages with [PrimeNG](https://www.pr
 
 Current entity type and component matchings:
 
-|Entity Type|Primeng Component|
-|---|---|---|
-|String|[InputText](https://www.primefaces.org/primeng/#/inputtext)|
-|Integer<br/>Long<br/>Float<br/>Double<br/>BigDecimal|[Spinner](https://www.primefaces.org/primeng/#/spinner)|
-|LocalDate<br/>ZonedDate<br/>Instant|[Calendar](https://www.primefaces.org/primeng/#/calendar)|
-|Boolean|[Checbox](https://www.primefaces.org/primeng/#/checkbox)|
-|Enum|[Dropdown](https://www.primefaces.org/primeng/#/dropdown)|
-|Binary Content| _Not yet_ |
-|Relations| _Not yet_ |
+| Entity Type | Primeng Component |
+| --- | --- |
+| String | [InputText](https://www.primefaces.org/primeng/#/inputtext) |
+| Integer<br/>Long<br/>Float<br/>Double<br/>BigDecimal | [Spinner](https://www.primefaces.org/primeng/#/spinner) |
+| LocalDate<br/>ZonedDate<br/>Instant | [Calendar](https://www.primefaces.org/primeng/#/calendar) |
+| Boolean | [Checbox](https://www.primefaces.org/primeng/#/checkbox) |
+| Enum | [Dropdown](https://www.primefaces.org/primeng/#/dropdown) |
+| Binary Content | _Not yet_ |
+| Relations | _Not yet_ |
+
 
 # Prerequisites
 
