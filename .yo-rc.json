@@ -1,0 +1,10 @@
+{
+  "generator-jhipster-module": {
+    "promptValues": {
+      "githubName": "tanrikut",
+      "authorName": "Tankut Koray",
+      "authorEmail": "tankut@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
