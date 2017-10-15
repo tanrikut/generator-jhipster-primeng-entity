@@ -58,6 +58,7 @@ npm update -g generator-jhipster-primeng-entity
 ```
 
 # Usage
+
 In your JHipster project, launch `yo jhipster-primeng-entity`.
 
 # License
