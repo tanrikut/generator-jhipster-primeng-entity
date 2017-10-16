@@ -1,6 +1,6 @@
 {
   "name": "generator-jhipster-primeng-entity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Updates entity related pages to use Primeng components.",
   "keywords": [
     "yeoman-generator",
