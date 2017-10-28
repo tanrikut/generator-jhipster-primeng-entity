@@ -305,6 +305,29 @@ module.exports = JhipsterGenerator.extend({
                         fs.writeFileSync(dialogComponentFilePath, dialogFileContent);
                     }
 
+                    // update entity.service.ts to remove date conversion as primeng already converts to date
+                    if (this.fieldsContainLocalDate || this.fieldsContainInstant || this.fieldsContainZonedDateTime) {
+                        const serviceFilePath = `${CLIENT_MAIN_SRC_DIR}app/entities/${this.entityFolderName}/${this.entityFileName}.service.ts`;
+                        let serviceFileContent = fs.readFileSync(serviceFilePath, 'utf8');
+
+                        // remove all toDate lines
+                        serviceFileContent = serviceFileContent.replace(/(.*this.dateUtils.toDate.*\r?\n)/gi, ``);
+
+                        fs.writeFileSync(serviceFilePath, serviceFileContent);
+                    }
+
+                    // update entity-popup.service.ts to remove date conversion as primeng already converts to date
+                    if (this.fieldsContainLocalDate || this.fieldsContainInstant || this.fieldsContainZonedDateTime) {
+                        const popupServiceFilePath = `${CLIENT_MAIN_SRC_DIR}app/entities/${this.entityFolderName}/${this.entityFileName}-popup.service.ts`;
+                        let serviceFileContent = fs.readFileSync(popupServiceFilePath, 'utf8');
+
+                        // remove all datePipe and transform lines
+                        serviceFileContent = serviceFileContent.replace(/(.*= this.datePipe*\r?\n)/gi, ``);
+                        serviceFileContent = serviceFileContent.replace(/(.*\.transform\(.*\r?\n)/gi, ``);
+
+                        fs.writeFileSync(popupServiceFilePath, serviceFileContent);
+                    }
+
                     // update entity's dialog html file
                     const htmlFilePath = `${CLIENT_MAIN_SRC_DIR}app/entities/${this.entityFolderName}/${this.entityFileName}-dialog.component.html`;
                     let htmlContent = this.fs.read(htmlFilePath);
