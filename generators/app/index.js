@@ -311,7 +311,7 @@ module.exports = JhipsterGenerator.extend({
                         let serviceFileContent = fs.readFileSync(serviceFilePath, 'utf8');
 
                         // remove all toDate lines
-                        serviceFileContent = serviceFileContent.replace(/(.*this.dateUtils.toDate.*\r?\n)/gi, ``);
+                        serviceFileContent = serviceFileContent.replace(/(.*this.dateUtils.toDate.*\r?\n)/gi, '');
 
                         fs.writeFileSync(serviceFilePath, serviceFileContent);
                     }
@@ -322,8 +322,8 @@ module.exports = JhipsterGenerator.extend({
                         let serviceFileContent = fs.readFileSync(popupServiceFilePath, 'utf8');
 
                         // remove all datePipe and transform lines
-                        serviceFileContent = serviceFileContent.replace(/(.*= this.datePipe*\r?\n)/gi, ``);
-                        serviceFileContent = serviceFileContent.replace(/(.*\.transform\(.*\r?\n)/gi, ``);
+                        serviceFileContent = serviceFileContent.replace(/(.*= this.datePipe*\r?\n)/gi, '');
+                        serviceFileContent = serviceFileContent.replace(/(.*\.transform\(.*\r?\n)/gi, '');
 
                         fs.writeFileSync(popupServiceFilePath, serviceFileContent);
                     }
